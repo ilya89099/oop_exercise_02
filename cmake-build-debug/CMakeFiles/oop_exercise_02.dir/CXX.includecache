@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ilya/CLionProjects/oop_exercise_02/bottle.h
+
+/home/ilya/CLionProjects/oop_exercise_02/main.cpp
+iostream
+-
+bottle.h
+/home/ilya/CLionProjects/oop_exercise_02/bottle.h
+vector
+-
+string
+-
+cassert
+-
+cmath
+-
+limits
+-
+
