@@ -12,7 +12,7 @@ int main() {
      std::string command;
 
     // я не знаю, как тут продемонстрировать пользовательский литерал, пусть будет что то такое
-    Bottle literal_constructed = "22.5,0.56"_bottle;
+    Bottle literal_constructed = "22.5 0.56"_bottle;
     assert(std::abs(literal_constructed.GetVolume() - 22.5) <  std::numeric_limits<double>::epsilon());
     assert(std::abs(literal_constructed.GetFillPercent() - 0.56) < std::numeric_limits<double>::epsilon());
 

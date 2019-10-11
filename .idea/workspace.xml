@@ -11,15 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="008313b5-81c9-4476-a553-13a336aa4f73" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bottle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/bottle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bottle.h" beforeDir="false" afterPath="$PROJECT_DIR$/bottle.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oop_exercise_02.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oop_exercise_02.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oop_exercise_02.dir/bottle.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oop_exercise_02.dir/bottle.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oop_exercise_02.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/oop_exercise_02.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/oop_exercise_02" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/oop_exercise_02" afterDir="false" />
-    </list>
+    <list default="true" id="008313b5-81c9-4476-a553-13a336aa4f73" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +72,7 @@
       <workItem from="1570789350732" duration="683000" />
       <workItem from="1570790559720" duration="12000" />
       <workItem from="1570793640468" duration="1840000" />
-      <workItem from="1570796157111" duration="749000" />
+      <workItem from="1570796157111" duration="1075000" />
     </task>
     <servers />
   </component>

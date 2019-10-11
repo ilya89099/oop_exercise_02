@@ -1,6 +1,7 @@
 #include "bottle.h"
 #include <exception>
 #include <stdexcept>
+#include <sstream>
 
 Bottle::Bottle(double volume, double fill_percent)
 : volume_(volume), fill_percent_(fill_percent) {
@@ -42,20 +43,10 @@ bool operator < (const Bottle& lhs, const Bottle& rhs) {
 }
 
 Bottle operator""_bottle(const char* str, size_t size) {
-    int idx = -1;
-    for (int i = 0; i < size; ++i) {
-        if (str[i] == ',') {
-            idx = i;
-        }
-    }
-    if (idx == -1 || idx == size - 1 || idx == 0) {
-
-    }
-    char* first_part = new char[idx];
-    char* second_part = new char [size - idx - 1];
-    std::copy(str, str + idx, first_part);
-    std::copy(str + idx + 1, str + size, second_part);
-    return Bottle(std::stod(first_part), std::stod(second_part));
+    std::stringstream ss(str);
+    Bottle res;
+    ss >> res;
+    return res;
 }
 
 std::istream& operator >> (std::istream& is, Bottle& b) {
