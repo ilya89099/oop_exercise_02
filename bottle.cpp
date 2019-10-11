@@ -57,3 +57,14 @@ Bottle operator""_bottle(const char* str, size_t size) {
     std::copy(str + idx + 1, str + size, second_part);
     return Bottle(std::stod(first_part), std::stod(second_part));
 }
+
+std::istream& operator >> (std::istream& is, Bottle& b) {
+    double volume, percent;
+    is >> volume >> percent;
+    b = Bottle(volume, percent);
+    return is;
+}
+
+std::ostream& operator << (std::ostream& os, const Bottle& b) {
+    os << "Volume:" <<b.GetVolume() << ", Fill percent:" << b.GetFillPercent() << ", Filled volume:" << b.GetFilledVolume();
+}

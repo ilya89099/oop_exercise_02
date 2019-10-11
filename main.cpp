@@ -18,16 +18,16 @@ int main() {
 
     while (std::cin >> command) {
         if (command == "create") {
-            double size, percent;
-            std::cin >> size >> percent;
-            if (size < 0 || percent < 0 || percent > 1) {
-                std::cout << "Incorrect parameters\n";
+            Bottle b;
+            try {
+                std::cin >> b;
+            } catch (...) {
+                std::cout << "Incorrect parameters" << "\n";
                 continue;
             }
-            bottles.emplace_back(size, percent);
+            bottles.push_back(b);
             std::cout   << "You created bottle number " << bottles.size() << "\n"
-                        << "Bottle size: " << bottles.back().GetVolume() << "\n"
-                        << "Bottle fill percent: " << bottles.back().GetFillPercent() << "\n";
+                        << bottles.back() << "\n";
         } else if (command == "compare") {
             std::string compare_string;
             int lhs, rhs;
@@ -75,6 +75,15 @@ int main() {
             } else if (operation == '-') {
                 std::cout << bottles[lhs] - bottles[rhs] << "\n";
             }
+        } else if (command == "print") {
+            int lhs;
+            lhs --;
+            std::cin >> lhs;
+            if (lhs < 0 || lhs >= bottles.size()) {
+                std::cout << "Incorrect parameters" << "\n";
+                continue;
+            }
+            std::cout << "Bottle number " << lhs + 1 << ": " << bottles[lhs] << "\n";
         } else if (command == "exit") {
             break;
         } else {
