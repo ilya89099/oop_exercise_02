@@ -1,11 +1,11 @@
 #pragma once
 
+#include <iostream>
+
 class Bottle {
 public:
 
     Bottle(double volume, double fill_percent = 0);
-
-    Bottle& SetPercent(double percent);
 
     double GetVolume() const;
     double GetFillPercent() const;
@@ -24,4 +24,4 @@ private:
     double fill_percent_;
 };
 
-Bottle operator""_bottle(long double size);
+Bottle operator""_bottle(const char* str, size_t size);

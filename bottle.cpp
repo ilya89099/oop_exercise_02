@@ -17,14 +17,6 @@ double Bottle::GetFillPercent() const {
     return fill_percent_;
 }
 
-Bottle& Bottle::SetPercent(double percent) {
-    if (percent < 0 || percent > 1) {
-        throw std::logic_error("Unacceptable percent value");
-    }
-    fill_percent_ = percent;
-    return *this;
-}
-
 double Bottle::GetFilledVolume() const {
     return volume_ * fill_percent_;
 }
@@ -49,6 +41,19 @@ bool operator < (const Bottle& lhs, const Bottle& rhs) {
     return lhs.GetFilledVolume() < rhs.GetFilledVolume();
 }
 
-Bottle operator""_bottle(long double size) {
-    return Bottle(size);
+Bottle operator""_bottle(const char* str, size_t size) {
+    int idx = -1;
+    for (int i = 0; i < size; ++i) {
+        if (str[i] == ',') {
+            idx = i;
+        }
+    }
+    if (idx == -1 || idx == size - 1 || idx == 0) {
+
+    }
+    char* first_part = new char[idx];
+    char* second_part = new char [size - idx - 1];
+    std::copy(str, str + idx, first_part);
+    std::copy(str + idx + 1, str + size, second_part);
+    return Bottle(std::stod(first_part), std::stod(second_part));
 }

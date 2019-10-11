@@ -6,21 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/ilya/CLionProjects/oop_exercise_02/bottle.h
-
-/home/ilya/CLionProjects/oop_exercise_02/main.cpp
-iostream
--
+/home/ilya/CLionProjects/oop_exercise_02/bottle.cpp
 bottle.h
 /home/ilya/CLionProjects/oop_exercise_02/bottle.h
-vector
+exception
 -
-string
+stdexcept
 -
-cassert
--
-cmath
--
-limits
+
+/home/ilya/CLionProjects/oop_exercise_02/bottle.h
+iostream
 -
 

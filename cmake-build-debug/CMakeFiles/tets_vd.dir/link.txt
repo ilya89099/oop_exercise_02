@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/tets_vd.dir/test_vd.cpp.o  -o tets_vd 

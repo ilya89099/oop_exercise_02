@@ -1,17 +1,18 @@
 #include <iostream>
-#include "bottle.h"
 #include <vector>
 #include <string>
 #include <cassert>
 #include <cmath>
 #include <limits>
 
+#include "bottle.h"
+
 int main() {
     std::vector<Bottle> bottles;
      std::string command;
 
     // я не знаю, как тут продемонстрировать пользовательский литерал, пусть будет что то такое
-    Bottle literal_constructed = (22.5_bottle).SetPercent(0.56);
+    Bottle literal_constructed = "22.5,0.56"_bottle;
     assert(std::abs(literal_constructed.GetVolume() - 22.5) <  std::numeric_limits<double>::epsilon());
     assert(std::abs(literal_constructed.GetFillPercent() - 0.56) < std::numeric_limits<double>::epsilon());
 
@@ -74,21 +75,6 @@ int main() {
             } else if (operation == '-') {
                 std::cout << bottles[lhs] - bottles[rhs] << "\n";
             }
-        } else if (command == "edit") {
-            int pos;
-            double new_percent;
-            std::cin >> pos >> new_percent;
-            if (pos <= 0 || pos > bottles.size() || new_percent < 0 || new_percent > 1) {
-                std::cout << "Incorrect parameters\n";
-                continue;
-            }
-
-            pos--;
-
-            bottles[pos].SetPercent(new_percent);
-            std::cout   << "Bottle number " << pos + 1 << "\n"
-                        << "Bottle size: " << bottles[pos].GetVolume() << "\n"
-                        << "Bottle fill percent: " << bottles[pos].GetFillPercent() << "\n";
         } else if (command == "exit") {
             break;
         } else {
