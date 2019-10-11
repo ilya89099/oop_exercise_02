@@ -12,19 +12,19 @@ public:
 
     double GetFilledVolume() const;
 
-    friend double operator + (const Bottle& lhs, const Bottle& rhs);
-    friend double operator - (const Bottle& lhs, const Bottle& rhs);
-
-    friend bool operator == (const Bottle& lhs, const Bottle& rhs);
-    friend bool operator > (const Bottle& lhs, const Bottle& rhs);
-    friend bool operator < (const Bottle& lhs, const Bottle& rhs);
-
-    friend std::istream& operator >> (std::istream& is, Bottle& b);
-    friend std::ostream& operator << (std::ostream& os, const Bottle& b);
-
 private:
     double volume_ = 0;
     double fill_percent_ = 0;
 };
+
+double operator + (const Bottle& lhs, const Bottle& rhs);
+double operator - (const Bottle& lhs, const Bottle& rhs);
+
+bool operator == (const Bottle& lhs, const Bottle& rhs);
+bool operator > (const Bottle& lhs, const Bottle& rhs);
+bool operator < (const Bottle& lhs, const Bottle& rhs);
+
+std::istream& operator >> (std::istream& is, Bottle& b);
+std::ostream& operator << (std::ostream& os, const Bottle& b);
 
 Bottle operator""_bottle(const char* str, size_t size);

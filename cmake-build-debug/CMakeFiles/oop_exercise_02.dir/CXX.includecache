@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/ilya/CLionProjects/oop_exercise_02/bottle.cpp
+bottle.h
+/home/ilya/CLionProjects/oop_exercise_02/bottle.h
+exception
+-
+stdexcept
+-
+
 /home/ilya/CLionProjects/oop_exercise_02/bottle.h
 iostream
 -

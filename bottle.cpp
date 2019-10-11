@@ -66,5 +66,5 @@ std::istream& operator >> (std::istream& is, Bottle& b) {
 }
 
 std::ostream& operator << (std::ostream& os, const Bottle& b) {
-    os << "Volume:" <<b.GetVolume() << ", Fill percent:" << b.GetFillPercent() << ", Filled volume:" << b.GetFilledVolume();
+    return os << "Volume:" <<b.GetVolume() << ", Fill percent:" << b.GetFillPercent() << ", Filled volume:" << b.GetFilledVolume();
 }
